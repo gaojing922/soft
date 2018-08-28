@@ -1,0 +1,51 @@
+git向仓库中添加文件流程
+命令:   git status ==>查看状态
+          git add 文件名 == >把工作区的文件提交到暂存区
+          git commit -m '提交的描述' ==>把暂存区的文件提交到git仓库
+
+工作区 ===》  暂存区 ===》 仓库
+
+============================================================
+touch 文件名 :touch a.php
+mkdir 文件夹 ：mkdir test
+ls:查看文件
+git config --list  查看初始化信息
+
+==============================================================
+
+1.进入目录  cd ....
+2.设置用户名:git config --global user.name 'github的用户名'
+   设置用户名邮箱 git config --global user.email 'github邮箱'
+3.初始化一个新的仓库 (mkidr test),创建一个文件夹，（cd test）初始化 git init(生成一个.git文件，存储本地仓库的文件)	
+
+//将文件提交到仓库
+1.git add 文件名  将文件提交到暂存区
+2.git status 查看状态
+3.git commit -m '提交的内容描述' 将文件从暂存区提交到仓库
+
+//修改仓库文件
+1.修改文件
+2.查看状态  git status
+3.把修改好的文件添加到暂存区  git add 文件
+4 git commit -m '修改的描述'  
+
+//删除仓库文件
+
+1.删除文件,可以直接删除
+2.从git中删除文件:git rm 文件
+3.提交操作 git commit -m '操作描述'
+
+
+//git远程仓库操作
+
+1.将远程仓库代码克隆到本地 git clone https://github.com/gaojing922/test.git
+2.修改或者增加文件之后 ，通过git add 修改或者新增的文件，再将修改或新增的文件通过 git commit -m '描述'提交到本地仓库,
+3.通过git push 将本地仓库中的文件提交到远程仓库
+
+
+//github搭建个人网站
+访问:https://用户名.github.io
+
+搭建步骤
+1.创建个人站点 ==>新建仓库(注:仓库名必须是[用户名.github.io])
+2.在仓库下新建index.html文件即可
