@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>    
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+        $(function () {
+            var data = [
+                { id: 1, name: "办公管理", parentId: 0 },
+                { id: 2, name: "请假申请", parentId: 1 },
+                { id: 3, name: "出差申请", parentId: 1 },
+                { id: 4, name: "请假记录", parentId: 2 },
+                { id: 5, name: "系统设置", parentId: 0 },
+                { id: 6, name: "权限管理", parentId: 5 },
+                { id: 7, name: "用户角色", parentId: 6 },
+                { id: 8, name: "菜单设置", parentId: 6 },
+                { id: 9, name: "用户管理", parentId: 6 },
+                { id: 10, name: "用户权限", parentId: 6 },
+                { id: 11, name: "导航", parentId: 6 },
+                { id: 12, name: "关于我们", parentId: 0 },
+                { id: 13, name: "关于我们", parentId: 7 }
+            ];
+            GetData(0, data);
+            $("body").append(menus);
+        });
+        
+
+
+
+
+
+        /*****************************************************************************************************************************/
+        /*****************************************************************************************************************************/
+        $(function () {
+            var data = [
+                { id: 1, name: "办公管理", parentId: 0 },
+                { id: 2, name: "请假申请", parentId: 1 },
+                { id: 3, name: "出差申请", parentId: 1 },
+                { id: 4, name: "请假记录", parentId: 2 },
+                { id: 5, name: "系统设置", parentId: 0 },
+                { id: 6, name: "权限管理", parentId: 5 },
+                { id: 7, name: "用户角色", parentId: 6 },
+                { id: 8, name: "菜单设置", parentId: 6 },
+                { id: 9, name: "用户管理", parentId: 6 },
+                { id: 10, name: "用户权限", parentId: 6 },
+                { id: 11, name: "导航", parentId: 6 },
+                { id: 12, name: "关于我们", parentId: 0 },
+                { id: 13, name: "关于我们", parentId: 7 }
+            ];
+            GetData(0, data);
+            $("body").append(menus);
+        });
+        //菜单列表html
+        var menus = '';
+        //parentId为0或者没有表示是顶级菜单
+        //根据菜单主键id生成菜单列表html
+        //id：菜单主键id
+        //arry：菜单数组信息
+        function GetData(id, arry) {
+            var childArry = GetParentArry(id, arry);
+            // childArry = [{ id: 1, name: "办公管理", parentId: 0 },
+            // { id: 5, name: "系统设置", parentId: 0 },
+            // { id: 12, name: "关于我们", parentId: 0 }]
+            console.log('childArry为:'+childArry);
+            if (childArry.length > 0) {
+                menus += '<ul>';
+                for (var i = 0;i<childArry.length;i++) {
+                    menus += '<li>' + childArry[i].name;
+                    GetData(childArry[i].id, arry);
+                    menus += '</li>';
+                }
+                menus += '</ul>';
+            }
+        }
+ 
+        //根据菜单主键id获取下级菜单
+        //id：菜单主键id
+        //arry：菜单数组信息
+        function GetParentArry(id, arry) {
+            var newArry = new Array();
+            for (var i=0;i<arry.length;i++) {
+                if (arry[i].parentId == id)
+                    newArry.push(arry[i]);
+            }
+            return newArry;
+        }
+       
+</script>
+</body>
+</html>
