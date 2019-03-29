@@ -1,0 +1,148 @@
+@charset 'utf-8';
+.lrHeader{height: 80px;}
+.lrLogo{height: 100%;background: url(../images/logo.png)no-repeat left center;padding-left: 80px;}
+.lrLogo h1{font-size: 40px;color: #525252;}
+.lrLogo h1 i{-webkit-animation:tx 1s linear;display: inline-block;
+    -ms-animation:tx 1s linear;
+    -moz-animation:tx 1s linear;
+    -o-animation:tx 1s linear;
+    animation:tx 1s linear; 
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    -moz-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;}
+.lrLogo h1 i:not(:first-child){margin-left: 14px;}
+.lrLogo h6{font-weight: bold; color: #848484;margin-top: 3px;}
+.lrType{border-left:1px solid #ccc; height: 60px;margin-top: 10px;margin-left: 10px;padding-left: 10px;line-height: 60px;}
+.lrType span{font-weight: 500;font-size: 30px;color: #222;display: inline-block;animation: title 1s ease-out;}
+@keyframes title{
+    from{opacity: 0;transform: scale(0) rotateY(0deg)}
+    to{opacity: 1;transform: scale(1) rotate(360deg)}
+}
+@-moz-keyframes title{
+    from{opacity: 0;transform: scale(0) rotateY(0deg)}
+    to{opacity: 1;transform: scale(1) rotate(360deg)}
+}
+@-webkit-keyframes title{
+    from{opacity: 0;transform: scale(0) rotateY(0deg)}
+    to{opacity: 1;transform: scale(1) rotate(360deg)}
+}
+@-o-keyframes title{
+    from{opacity: 0;transform: scale(0) rotateY(0deg)}
+    to{opacity: 1;transform: scale(1) rotate(360deg)}
+}
+.headerSmall{height: 100%;line-height: 80px;}
+.headerSmall li.noUser a{transition: all .5s linear;cursor: pointer;color: #1080d0;font-size: 14px;font-weight: bold;padding-left: 2px;}
+.headerSmall li.noUser a:hover{text-decoration: underline;}
+.sameLrBox{margin-top: 70px;margin-bottom: 70px;}
+.loginBanner{width: 600px;height: 400px;position: relative}
+.loginBox{width: 380px;height: 400px;border: 1px solid #5d7c8a;border-radius: 5px;box-shadow: 0 0 15px #5d7c8a;}
+.banner{width: 100%;height: 100%;position: relative;overflow: hidden;}
+.banner ul{width: 6600px;height: 100%;position: absolute;left: 0px;top: 0px;}
+.banner ul li{float: left;width: 600px;height: 100%;background-repeat: no-repeat;background-position: center;background-size: cover;}
+.banner ul li.bg_1{background-image: url(../images/ad1.png)}
+.banner ul li.bg_2{background-image: url(../images/ad2.png)}
+.banner ul li.bg_3{background-image: url(../images/ad3.png)}
+.banner_title{position:absolute;text-align: center;bottom:10px;left: 0;width: 100%;display: inline-block;margin: 0 auto;z-index: 55;}
+.banner_title em{display: inline-block;height: 20px;width: 20px;border-radius: 20px;background: #cfcfcf;cursor: pointer;transition: all .3s linear;}
+.banner_title em:not(:first-child){margin-left: 5px;}
+.banner_title em:not(:last-child){margin-right: 5px;}
+.banner_title em:hover,.banner_title em.selected{background-color: #fe6500;}
+.lrTitle{text-align: center;width: 300px;margin: 0 auto;height: 80px;font-size: 20px;color: #222222;line-height: 80px;}
+.sameLogin-row{height: 40px;width: 300px;border: 1px solid #dddddd;margin: 0 auto;overflow: hidden;border-radius: 20px;}
+.sameLogin-row i,.sameLogin-row input,.sameLogin-row label{display: block;float: left;height: 100%;}
+.sameLogin-row i{width: 40px;background-repeat: no-repeat;background-position: center;}
+.sameLogin-row label{height: 26px;width: 1px;background: #d2d2d2;margin-top: 7px;}
+.sameLogin-row input{margin-left: 10px;width: 100px;padding-right: 10px;width: 239px;line-height: 40px;}
+.loginUser_box i{background-image: url(../images/username_bg.png)}
+.loginPwd_box i{background-image: url(../images/password_bg.png)}
+.loginUser_box{margin-top: 25px;}
+.loginPwd_box{margin-top: 35px;}
+.forgetPwd{height: 40px;line-height: 40px;width: 300px;margin: 0 auto;}
+.forgetPwd a{font-size: 12px;color: #444444;transition: all .3s linear;cursor: pointer;margin-right: 13px;color: #666;}
+.forgetPwd a:hover,.goR:hover{color: #fe6500}
+.login_btn{width: 300px;margin: 0 auto;height: 40px;overflow: hidden;margin-top: 20px;}
+.login_btn button,.regist-btn button{height: 100%;line-height: 40px;border: 1px solid #dddddd;border-radius: 20px;transition: all .3s linear;cursor: pointer;width: 100%;background: #fffafa;color: #444444;}
+.login_btn button:hover,.regist-btn button:hover{background: #d8d2d2;color: #222222;border: 1px solid #d8d2d2;}
+.goRegist{border-top: 1px dashed #dddddd;height: 40px;line-height: 40px;margin-top: 35px;}
+.goR{margin-right: 53px;transition: all .3s linear;cursor: pointer;color: #666;}
+.goR i{margin-top: 11px; margin-right: 5px;display: block;float: left;height: 18px;width: 18px;transition: all .3s linear;background: url(../images/icon.png) no-repeat;background-position: -176px -81px;}
+.goR a{display: block;float: left;}
+/*注册*/
+.registContent,.forgetBox{background: #f3f3f3;padding: 50px 0;}
+.registBox{background: #fff;border-radius:5px;box-shadow: 0 0 10px #d2d2d2;height: 450px;width:550px;margin: 0 auto;padding-top: 25px;}
+.registType{text-align: center;}
+.registType li{position: relative;;display: inline-block;padding: 0 30px;height: 40px;line-height: 40px;cursor: pointer;transition: all .3s linear;color: #888888;}
+.registType li:nth-child(1){margin-right: 15px}
+.registType li:nth-child(2){margin-left: 15px;}
+.registType li:after{display: block;position: absolute;height: 2px;width:0;background: #1080d0;left: 50%;bottom: 0;content: '';transition: all .3s linear;}
+.registType li:hover:after,.registType li.select:after{left: 0;width: 100%;}
+.registType li.select,.registType li:hover{color: #1080d0;}
+.registAll{position: relative;width: 100%;height: 360px;transition: 0.6s;transform-style: preserve-3d;}
+.phoneContent, .emailContent {position: absolute;left: 0;top: 0;backface-visibility: hidden;width: 100%; height: 100%; }
+.phoneContent{transform: rotateY(0deg);}
+.emailContent{transform: rotateY(-180deg);padding-top: 10px;}
+.regist[name='0'] .registAll{transform: rotateY(0deg);}
+.regist[name='1'] .registAll{transform: rotateY(180deg);}
+.phoneBox .showCount,.phoneBox label,.phoneBox input{background: #fff;position: relative; z-index: 2;}
+.regist{width: 360px;margin: 0 auto;margin-top: 20px;}
+.sameRegist-row{height: 40px;border: 1px solid #dddddd;border-radius: 20px;position: relative;margin-bottom: 22px;}
+.confirPwd{margin-bottom: 10px;}
+.phoneBox .showCount{float: left;width: 70px;text-align: center;height: 100%;line-height: 40px;cursor: pointer;    border-radius: 20px 0 0 20px;}
+.showCount i{float: right;display: block; margin-top: 15px;width: 7px;height: 10px; background: url(../images/icon.png) no-repeat 0 0;}
+.showCount span{color: #444444;}
+.phoneBox label{display: block;float: left;width: 1px;height: 30px;background: #cccccc;margin-left: 10px; margin-top: 5px;}
+.phoneBox input{float: left;margin-left: 5px;width: 254px;height: 100%;}
+.countBox{z-index: 2;background: #fff;position: absolute;top: 42px;width: 100%;border: 1px solid #d2d2d2;border-radius: 10px;transition: all .3s linear;overflow-x: hidden;padding: 3px 0;color: #666666;font-size: 12px;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: showCount;
+    animation-name: showCount;
+}
+@keyframes showCount{
+	from{transform:translate3d(0,-30px,0);opacity: 0;}
+	to{transform:translate3d(0,0,0);opacity: 1;}
+}
+@-moz-keyframes showCount{
+	from{transform:translate3d(0,-30px,0);}
+	to{transform:translate3d(0,0,0);}
+}
+@-webkit-keyframes showCount{
+	from{transform:translate3d(0,-30px,0);}
+	to{transform:translate3d(0,0,0);}
+}
+@-o-keyframes showCount{
+	from{transform:translate3d(0,-30px,0);}
+	to{transform:translate3d(0,0,0);}
+}
+.countBox[name='0']{display: block;}
+.countBox[name='1']{display: none;}
+.countBox li{height: 32px;line-height: 32px;transition: all .2s linear;cursor: pointer;padding: 0 15px;}
+.countBox li:hover{color: #fff;background: #1080d0; font-weight: bold;}
+.countBox li span{float: right;}
+.allRegist-row{overflow: hidden;}
+.allRegist-row input{padding-left: 20px;width: 320px;height: 100%;}
+.codeRow input{float: left;height: 100%;padding-left: 20px;width: 200px;}
+.codeRow button{height: 100%;line-height: 40px;font-size: 12px;color: #444444;cursor: pointer;transition: all .3s linear;width: 138px;background-color: #f2f2f2;}
+.give{color: #666666;padding-left: 10px;}
+.give i{color: #ff0000;padding-right: 5px;}
+.regist-btn{height: 40px;overflow: hidden;margin-top: 10px;}
+.readAggree{height: 35px;line-height: 35px;padding-left: 10px;margin-top: 15px;}
+.aggree{display: inline-block;height: 12px;width: 12px;border-radius: 3px;cursor: pointer;transition: all .3s linear;position: relative;top: 2px;margin-right: 2px;}
+.aggree[name='0']{background-color: #fff;border: 1px solid #866666;}
+.aggree[name='1']{background-color:#1080d0;border: 1px solid #1080d0;}
+.readAggree a{cursor: pointer;color:#1080d0;transition: all .3s linear}
+.readAggree a:hover{cursor: pointer;text-decoration: underline;}
+.emailContent .sameRegist-row{margin-bottom: 30px;}
+.emailContent .confirPwd{margin-bottom: 10px;}
+.emailContent .readAggree {margin-top: 25px;}
+.emailContent .regist-btn {margin-top: 20px;}
+/*忘记密码*/
+.forget_content{background: #ffffff;height: 500px;}
+.forgetBox .emailContent .sameRegist-row{margin-bottom: 25px;}
+.forgetBox .phoneContent{padding-top: 10px;}
+.forgetBox .regist-btn{margin-top: 30px;}
+.goIndex{cursor: pointer;}
